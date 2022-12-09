@@ -1,15 +1,11 @@
 import * as fs from "fs";
 import {CSVReader} from "./CSVReader";
+import {MatchResult} from "./MatchResult";
 
 const reader = new CSVReader("football.csv")
 reader.read()
 
-// 使用Enum
-enum MatchResult {
-    HomeWin ='H',
-    AwayWin = "A",
-    Draw = "D"
-}
+console.log(reader.data)
 
 let manUnitedWins:number = 0;
 
@@ -21,4 +17,4 @@ for(let match of reader.data ){
     }
 }
 
-console.log(`manUnitedWins : ${manUnitedWins} times`)
+// console.log(`manUnitedWins : ${manUnitedWins} times`)
